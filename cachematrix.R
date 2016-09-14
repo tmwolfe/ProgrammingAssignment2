@@ -19,12 +19,12 @@ makeCacheMatrix <- function(x = matrix()) {
                 inv <<- NULL
         }
         ## Defines the getter of the matrix x. X is not defined in the function so it is 
-        ##retrieved from the parent environment.
+        ##retrieved from the parent environment
         get <- function() x
-        ## Defines the setter. Assigns the input argument to the value of m in parent 
+        ## Defines the setter. Assigns the input argument to the value of inv in parent 
         ## environment
         setinverse <- function(inverse) inv <<- inverse
-        ## Defines the getter for m
+        ## Defines the getter for inv
         getinverse <- function() inv
         ## Returns a list to the parent environment
         list(set = set, get = get,
